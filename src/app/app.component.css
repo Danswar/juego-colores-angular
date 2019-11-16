@@ -1,0 +1,10 @@
+div{
+    display: flex;
+    justify-content: space-around;
+}
+
+#iniciar{
+    width: 12em;
+    height: 12em;
+    background: green;
+}
