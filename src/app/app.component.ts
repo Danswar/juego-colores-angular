@@ -60,11 +60,11 @@ export class AppComponent implements OnInit{
   }
 
   ganaste(){
-    this.mensajeFinal="GANASTE!!!";
+    this.mensajeFinal="VAMOS!! HAZ GANADO!!! :)";
   }
 
   perdiste(){
-    this.mensajeFinal="PERDISTE!!";
+    this.mensajeFinal="SE TE ACABARON LOS INTENTOS :( ";
   }
 
 

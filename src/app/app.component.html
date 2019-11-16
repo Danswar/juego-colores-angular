@@ -1,13 +1,41 @@
+<header>
+  <img src="../assets/colores.jpg" alt="circulo cromatico" />
+  <div>
+    <h1>El juego de lo colores</h1>
+    <h2>Desafia tu suerte y conocimientos de colores Hexadecimales</h2>
+  </div>
+</header>
+<hr />
 
-<div>
-    <app-color *ngFor = "let color of colores" [colorHexa] = "color" [habilitado]="isJugando" (onColorClick)="colorClick($event)"></app-color>
-</div>
+<section>
+  <h3>
+		Cual color corresponde al Hexadecimal: <strong>{{ ganador }}</strong>
+	 </h3>
+	<p>{{mensajeFinal}}</p>
+  <div class="cont-colores" *ngIf = "isJugando">
+    <app-color
+      *ngFor="let color of colores"
+      [colorHexa]="color"
+      [habilitado]="isJugando"
+      (onColorClick)="colorClick($event)"
+    ></app-color>
+  </div>
+</section>
 
-<h1>{{ganador}}</h1>
-<h1>{{intentos}} / {{oportunidades}}</h1>
-<h1>{{mensajeFinal}}</h1>
 
 
-<div id="iniciar" (click)="empezarJuego()">
-    Reiniciar
-</div>
+<section class="controles">
+	<div>
+			<h1>{{ intentos }} /  {{ oportunidades }}</h1>
+			<h4>Intentos</h4>
+	</div>
+
+  <div id="iniciar" (click)="empezarJuego()">
+    <img src="../assets/refresh.png" alt="Reiniciar" />
+    <h4>Reiniciar</h4>
+  </div>
+</section>
+
+<footer>
+	Aplicación desarrollada en Angular en el Curso Webmaster Profeional 2019 -- Daniel Padrino
+</footer>
