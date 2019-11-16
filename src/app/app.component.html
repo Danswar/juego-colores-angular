@@ -9,9 +9,11 @@
 
 <section>
   <h3>
-		Cual color corresponde al Hexadecimal: <strong>{{ ganador }}</strong>
+		Cual color corresponde al Hexadecimal: <strong>{{ ganador }}</strong> ???
 	 </h3>
 	<p>{{mensajeFinal}}</p>
+
+	 <!--AQUI USAMOS EL COMPONENTE COLOR-->
   <div class="cont-colores" *ngIf = "isJugando">
     <app-color
       *ngFor="let color of colores"
@@ -19,7 +21,8 @@
       [habilitado]="isJugando"
       (onColorClick)="colorClick($event)"
     ></app-color>
-  </div>
+	</div>
+	
 </section>
 
 
@@ -30,11 +33,13 @@
 			<h4>Intentos</h4>
 	</div>
 
-  <div id="iniciar" (click)="empezarJuego()">
+	<div (click)="empezarJuego()">
     <img src="../assets/refresh.png" alt="Reiniciar" />
     <h4>Reiniciar</h4>
   </div>
 </section>
+
+
 
 <footer>
 	Aplicación desarrollada en Angular en el Curso Webmaster Profeional 2019 -- Daniel Padrino
